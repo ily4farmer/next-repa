@@ -1,3 +1,74 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "next"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "rules": {
+    "no-console": "warn",
+    // "arrow-body-style": ["error", "as-needed"],
+    "arrow-body-style": "warn",
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@next/next/no-img-element": "off",
+    "prefer-const": false
+}
+
+// // TOCOMPILE build Variant
+// {
+//   "env": {
+//     "browser": true,
+//     "es2021": true
+//   },
+//   "extends": [
+//     "plugin:@typescript-eslint/recommended",
+//     "plugin:react/recommended",
+//     "prettier",
+//     "plugin:import/errors",
+//     "plugin:import/warnings",
+//     "plugin:import/typescript",
+//     "next"
+//   ],
+//   "parser": "@typescript-eslint/parser",
+//   "plugins": ["react", "@typescript-eslint", "react-hooks"],
+//   "rules": {
+//     "no-console": "off",
+//     "arrow-body-style": ["off", "as-needed"],
+//     "@typescript-eslint/no-use-before-define": "off",
+//     "@typescript-eslint/no-explicit-any": "off",
+//     "@typescript-eslint/no-empty-function": "off",
+//     "@typescript-eslint/no-non-null-assertion": "off",
+//     "@typescript-eslint/no-unused-vars": [
+//       "off",
+//       {
+//         "argsIgnorePattern": "^_"
+//       }
+//     ],
+//     "react-hooks/rules-of-hooks": "off",
+//     "react-hooks/exhaustive-deps": "off",
+//     "@next/next/no-img-element": "off",
+//     "jsx-a11y/alt-text": "off",
+//     "import/export": "off"
+//   }
 }
