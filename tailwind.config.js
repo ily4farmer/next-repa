@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
@@ -34,5 +36,21 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.items-center-between': {
+          display: 'flex',
+          'aling-items': 'center',
+          'justify-content': 'space-between',
+        },
+        '.content-hidden': {
+          'content-visibility': 'hidden',
+        },
+        '.content-visible': {
+          'content-visibility': 'visible',
+        },
+      })
+    }),
+  ],
 }

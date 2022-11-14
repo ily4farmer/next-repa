@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="w-full bg-slate-500">
       <div className="container">
-        <div className="flex justify-between">
+        <div className="items-center-between">
           <div>logo</div>
           <button>Connect</button>
         </div>
